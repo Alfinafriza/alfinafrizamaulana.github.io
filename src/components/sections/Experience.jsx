@@ -3,6 +3,7 @@ import Container from "../layout/Container";
 import SectionHeading from "../ui/SectionHeading";
 import { educationData } from "../../data/experience";
 import { useScrollReveal } from "../../hooks/useScrollReveal";
+import { getAssetPath } from "../../utils/assets";
 
 export default function Experience() {
   const { ref, isVisible } = useScrollReveal({ threshold: 0.1 });
@@ -41,7 +42,7 @@ export default function Experience() {
                   <div className="flex h-20 w-20 sm:h-24 sm:w-24 md:h-28 md:w-28 items-center justify-start p-1 mb-2">
                     {item.logo ? (
                       <img
-                        src={item.logo}
+                        src={getAssetPath(item.logo)}
                         alt={`Logo ${item.name}`}
                         className="max-h-full max-w-full object-contain grayscale opacity-60 transition-all duration-300 hover:grayscale-0 hover:opacity-100 cursor-pointer"
                       />

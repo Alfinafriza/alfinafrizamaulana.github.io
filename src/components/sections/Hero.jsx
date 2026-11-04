@@ -2,6 +2,7 @@ import Container from "../layout/Container";
 import Button from "../ui/Button";
 import { profile } from "../../data/profile";
 import { useScrollReveal } from "../../hooks/useScrollReveal";
+import { getAssetPath } from "../../utils/assets";
 
 export default function Hero() {
   const { ref, isVisible } = useScrollReveal({ threshold: 0.1 });
@@ -97,7 +98,7 @@ export default function Hero() {
                 {/* Backdrop shape di belakang foto */}
                 <div className="absolute h-64 w-64 sm:h-72 sm:w-72 md:h-80 md:w-80 rounded-full bg-[var(--bg-alt)] opacity-90 blur-xs" />
                 <img
-                  src={heroImage}
+                  src={getAssetPath(heroImage)}
                   alt={name}
                   className="relative z-10 h-72 sm:h-80 md:h-96 w-auto object-contain drop-shadow-md transition-transform duration-300 hover:scale-[1.02]"
                 />

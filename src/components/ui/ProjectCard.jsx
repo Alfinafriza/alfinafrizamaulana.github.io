@@ -1,5 +1,6 @@
 import { ExternalLink, Github, FolderGit2 } from "lucide-react";
 import { useScrollReveal } from "../../hooks/useScrollReveal";
+import { getAssetPath } from "../../utils/assets";
 
 export default function ProjectCard({ project }) {
   const { ref, isVisible } = useScrollReveal();
@@ -27,7 +28,7 @@ export default function ProjectCard({ project }) {
       <div className="relative aspect-video w-full overflow-hidden bg-black/40 flex items-center justify-center">
         {image ? (
           <img
-            src={image}
+            src={getAssetPath(image)}
             alt={imageAlt || title}
             loading="lazy"
             className="h-full w-full object-cover object-top transition-transform duration-300 group-hover:scale-[1.02]"
