@@ -10,7 +10,7 @@ export const profile = {
   availability: "", // Kosongkan jika tidak ingin menampilkan status ketersediaan
   email: "aprodithedai@gmai.com", // Contoh: "nama@email.com"
   cvUrl: "", // Path ke file CV, contoh: "/cv.pdf"
-  heroImage: "/images/hero-profile.png", // Path ke foto profil hero
+  heroImage: "", // Kosongkan foto profil hero
   socials: {
     github: "https://github.com/Alfinafriza", // Contoh: "https://github.com/username"
     linkedin: "", // Contoh: "https://linkedin.com/in/username"
